@@ -63,6 +63,23 @@ E adionar no package.json
   },
 ...
 
+instalar style e css loader
 
+yarn add style-loader css-loader file-loader -D
+
+e adicionar em webpack rules
+
+...
+,
+         {
+            test: /\.css$/,
+            use: {
+               loader: [
+                  { loader: 'style-loader' },
+                  { loader: 'css-loader' },
+               ]
+            }
+         }
+...
 
 
